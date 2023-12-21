@@ -1,6 +1,7 @@
-package models;
+package entity;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Currency {
     private String name;
@@ -16,6 +17,7 @@ public class Currency {
         this.valuteID = valuteID;
         this.updatedAt = updatedAt;
     }
+
 
     public void setCharCode(String charCode) {
         this.charCode = charCode;

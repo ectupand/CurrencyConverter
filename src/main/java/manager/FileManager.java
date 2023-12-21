@@ -1,36 +1,59 @@
-package store;
+package manager;
 
-import models.Currency;
+import entity.Currency;
+import models.CurrencyModel;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.security.spec.ECField;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Storage {
+public class FileManager {
+    private static List<Currency> currenciesList;
+    private static List<CurrencyModel> currenciesModelsList;
 
-    public static void store() {
-
+    private static void addToCurrenciesList(Currency currency) {
+        currenciesList.add(currency);
+    }
+    private static void addToCurrenciesModelsList(CurrencyModel currency) {
+        currenciesModelsList.add(currency);
     }
 
-    public static List<Currency> parseXML() {
+    public static List<Currency> getCurrenciesList() {
+        return currenciesList;
+    }
+
+    public static List<CurrencyModel> getCurrenciesModelsList() {
+        return currenciesModelsList;
+    }
+
+    public static void storeResponseToFile(StringBuilder response){
+        try{
+            FileWriter fstream = new FileWriter( "response.xml", StandardCharsets.UTF_8);
+            BufferedWriter out = new BufferedWriter(fstream);
+            out.write(String.valueOf(response));
+            out.close();
+        }catch (Exception e){
+            System.err.println(e);
+        }
+    }
+
+    private static void parseXML() {
         Document doc;
         try {
             doc = buildDocument();
         } catch (Exception e) {
             System.err.println();
-            return null;
+            return;
         }
 
         Node valCursNode = doc.getFirstChild();
@@ -44,7 +67,6 @@ public class Storage {
             System.err.println(e);
         }
 
-        List<Currency> currenciesList = new ArrayList<>();
         NodeList valCursChildren = valCursNode.getChildNodes();
         for (int i = 0; i < valCursChildren.getLength(); i++) {
             if (valCursChildren.item(i).getNodeType() != Node.ELEMENT_NODE) {
@@ -78,9 +100,11 @@ public class Storage {
                 }
             }
             Currency currency = new Currency(name, charCode, value, valuteID, updatedAt);
-            currenciesList.add(currency);
+            CurrencyModel currencyModel = new CurrencyModel(name, charCode, value);
+
+            addToCurrenciesList(currency);
+            addToCurrenciesModelsList(currencyModel);
         }
-        return currenciesList;
     }
 
     private static Document buildDocument() throws Exception {
@@ -88,6 +112,4 @@ public class Storage {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         return dbf.newDocumentBuilder().parse(file);
     }
-
-
 }

@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be66dec-7019-415d-bc26-3a8120d57d07" name="Changes" comment="init">
+    <list default="true" id="2be66dec-7019-415d-bc26-3a8120d57d07" name="Changes" comment="parse xml">
       <change afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/store/Storage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Currency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/manager/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/CurrencyModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/cbr/Accessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/FileServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/store/Storage.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +42,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.App.executor": "Debug",
+    "Application.App.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -100,7 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703076390666</updated>
       <workItem from="1703076391765" duration="2165000" />
-      <workItem from="1703079426127" duration="21985000" />
+      <workItem from="1703079426127" duration="26151000" />
     </task>
     <task id="LOCAL-00001" summary="Database.java">
       <option name="closed" value="true" />
@@ -134,25 +138,45 @@
       <option name="project" value="LOCAL" />
       <updated>1703109028210</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="parse xml">
+      <option name="closed" value="true" />
+      <created>1703112915894</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703112915894</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Database.java" />
     <MESSAGE value="Web Accessor" />
     <MESSAGE value="Currency model" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="parse xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="parse xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/store/Storage.java</url>
-          <line>86</line>
+          <line>82</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>

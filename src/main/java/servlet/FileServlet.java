@@ -1,15 +1,16 @@
-package ru.cbr;
+package servlet;
+
+import manager.FileManager;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 import java.util.Scanner;
 
-public class Accessor {
+public class FileServlet {
     private static URL apiPath = null;
     private static HttpsURLConnection connection = null;
 
@@ -24,7 +25,7 @@ public class Accessor {
     }
 
     public static void connect() throws IOException {
-        ru.cbr.Accessor.configureApiPath();
+        FileServlet.configureApiPath();
         connection = (HttpsURLConnection) apiPath.openConnection();
         connection.setRequestMethod("GET");
 
@@ -43,23 +44,13 @@ public class Accessor {
             Scanner scanner = new Scanner(connection.getInputStream());
             while (scanner.hasNext()) {
                 sb.append(scanner.nextLine());
-                storeResponseToFile(sb);
+                FileManager.storeResponseToFile(sb);
             }
         } else {
             System.err.println("Error in sending a GET request");
         }
     }
 
-    private static void storeResponseToFile(StringBuilder response){
-        try{
-            FileWriter fstream = new FileWriter( "response.xml", StandardCharsets.UTF_8);
-            BufferedWriter out = new BufferedWriter(fstream);
-            out.write(String.valueOf(response));
-            out.close();
-        }catch (Exception e){
-            System.err.println(e);
-        }
 
-    }
 
 }
