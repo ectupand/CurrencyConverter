@@ -1,6 +1,5 @@
 package models;
 
-import java.time.LocalDate;
 
 public class CurrencyModel {
     private String name;

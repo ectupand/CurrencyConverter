@@ -1,7 +1,6 @@
 package entity;
 
 import java.time.LocalDate;
-import java.util.List;
 
 public class Currency {
     private String name;
@@ -18,6 +17,25 @@ public class Currency {
         this.updatedAt = updatedAt;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getCharCode() {
+        return charCode;
+    }
+
+    public Float getValue() {
+        return value;
+    }
+
+    public String getValuteID() {
+        return valuteID;
+    }
+
+    public LocalDate getUpdatedAt() {
+        return updatedAt;
+    }
 
     public void setCharCode(String charCode) {
         this.charCode = charCode;
