@@ -5,6 +5,7 @@ import models.CurrencyModel;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import repository.CurrencyRepository;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.BufferedWriter;
@@ -14,15 +15,17 @@ import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FileManager {
-    private static List<Currency> currenciesList;
-    private static List<CurrencyModel> currenciesModelsList;
+    private static List<Currency> currenciesList = new ArrayList<>();
+    private static List<CurrencyModel> currenciesModelsList = new ArrayList<>();
 
     private static void addToCurrenciesList(Currency currency) {
         currenciesList.add(currency);
     }
+
     private static void addToCurrenciesModelsList(CurrencyModel currency) {
         currenciesModelsList.add(currency);
     }
@@ -35,18 +38,18 @@ public class FileManager {
         return currenciesModelsList;
     }
 
-    public static void storeResponseToFile(StringBuilder response){
-        try{
-            FileWriter fstream = new FileWriter( "response.xml", StandardCharsets.UTF_8);
+    public static void storeResponseToFile(StringBuilder response) {
+        try {
+            FileWriter fstream = new FileWriter("response.xml", StandardCharsets.UTF_8);
             BufferedWriter out = new BufferedWriter(fstream);
             out.write(String.valueOf(response));
             out.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             System.err.println(e);
         }
     }
 
-    private static void parseXML() {
+    public static void parseXML() {
         Document doc;
         try {
             doc = buildDocument();
@@ -104,6 +107,7 @@ public class FileManager {
             addToCurrenciesList(currency);
             addToCurrenciesModelsList(currencyModel);
         }
+        new CurrencyRepository().updateCurrenciesTable(getCurrenciesList());
     }
 
     private static Document buildDocument() throws Exception {
