@@ -7,40 +7,92 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import repository.CurrencyRepository;
 
+import javax.net.ssl.HttpsURLConnection;
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.nio.charset.StandardCharsets;
+import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
+import java.util.Scanner;
 
 public class FileManager {
-    private static List<Currency> currenciesList = new ArrayList<>();
-    private static List<CurrencyModel> currenciesModelsList = new ArrayList<>();
+    private List<Currency> currenciesList = new ArrayList<>();
+    private List<CurrencyModel> currenciesModelsList = new ArrayList<>();
+    private File file;
 
-    private static void addToCurrenciesList(Currency currency) {
+    private void addToCurrenciesList(Currency currency) {
         currenciesList.add(currency);
     }
 
-    private static void addToCurrenciesModelsList(CurrencyModel currency) {
+    private void addToCurrenciesModelsList(CurrencyModel currency) {
         currenciesModelsList.add(currency);
     }
 
-    public static List<Currency> getCurrenciesList() {
+    public List<Currency> getCurrenciesList() {
         return currenciesList;
     }
 
-    public static List<CurrencyModel> getCurrenciesModelsList() {
+    public List<CurrencyModel> getCurrenciesModelsList() {
         return currenciesModelsList;
     }
 
-    public static void storeResponseToFile(StringBuilder response) {
+    private URL apiPath = null;
+    private HttpsURLConnection connection = null;
+
+    private void configureApiPath() throws IOException, URISyntaxException {
+        Properties prop = new Properties();
+        try (InputStream in = getClass().getResourceAsStream("/app.config");
+             BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
+            prop.load(reader);
+        }
+        this.apiPath = URI.create(prop.getProperty("STORE.RU.CBR.PATH")).toURL();
+    }
+
+
+    private void connect() throws IOException {
         try {
-            FileWriter fstream = new FileWriter("response.xml", StandardCharsets.UTF_8);
+            configureApiPath();
+        }catch (URISyntaxException e){
+            System.err.println(e);
+        }
+        this.connection = (HttpsURLConnection) apiPath.openConnection();
+        this.connection.setRequestMethod("GET");
+
+        System.out.println("Response CODE: " + this.connection.getResponseCode() + " " + this.connection.getResponseMessage());
+
+    }
+
+    private void disconnect(){
+        this.connection.disconnect();
+        this.connection = null;
+    }
+
+    private void getXML(String filePath) throws IOException {
+        connect();
+        if (this.connection.getResponseCode() == HttpsURLConnection.HTTP_OK) {
+            StringBuilder sb = new StringBuilder();
+            Scanner scanner = new Scanner(this.connection.getInputStream());
+            while (scanner.hasNext()) {
+                sb.append(scanner.nextLine());
+                storeResponseToFile(sb, filePath);
+            }
+        } else {
+            System.err.println("Error in sending a GET request");
+        }
+
+        disconnect();
+    }
+
+    private void storeResponseToFile(StringBuilder response, String filePath) {
+        try {
+            this.file = new File(filePath);
+            FileWriter fstream = new FileWriter(this.file, true);
             BufferedWriter out = new BufferedWriter(fstream);
             out.write(String.valueOf(response));
             out.close();
@@ -49,10 +101,12 @@ public class FileManager {
         }
     }
 
-    public static void parseXML() {
+    public void parseXML(String filePath) throws IOException {
+        getXML(filePath);
+
         Document doc;
         try {
-            doc = buildDocument();
+            doc = buildDocument(filePath);
         } catch (Exception e) {
             System.err.println();
             return;
@@ -108,11 +162,14 @@ public class FileManager {
             addToCurrenciesModelsList(currencyModel);
         }
         new CurrencyRepository().updateCurrenciesTable(getCurrenciesList());
+        //this.file.delete();
     }
 
-    private static Document buildDocument() throws Exception {
-        File file = new File("response.xml");
+    private Document buildDocument(String filePath) throws Exception {
+        File file = new File(filePath);
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         return dbf.newDocumentBuilder().parse(file);
     }
+
+
 }
