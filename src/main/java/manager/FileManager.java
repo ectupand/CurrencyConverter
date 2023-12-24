@@ -162,7 +162,7 @@ public class FileManager {
             addToCurrenciesModelsList(currencyModel);
         }
         new CurrencyRepository().updateCurrenciesTable(getCurrenciesList());
-        //this.file.delete();
+        this.file.delete();
     }
 
     private Document buildDocument(String filePath) throws Exception {

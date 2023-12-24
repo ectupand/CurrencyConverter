@@ -1,32 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="wishmaster:Web" />
+      <artifact name="wishmaster:Web exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be66dec-7019-415d-bc26-3a8120d57d07" name="Changes" comment="fix project structure">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="2be66dec-7019-415d-bc26-3a8120d57d07" name="Changes" comment="xml work via servlet">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/wishmaster_Web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/wishmaster_Web_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/META-INF/application.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/ConverterServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/converter.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Currency.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/manager/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/CurrencyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/CurrencyModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/CurrencyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/CurrencyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/CurrencyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/FileServlet.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="2" />
+    <option name="myActivateViewOnRun" value="false" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -45,16 +73,22 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 10.1.17.executor": "Run",
+    "Tomcat Server.Tomcat 9.0.84.executor": "Run",
     "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "openjdk-21",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ruhno/IdeaProjects/wishmaster/target",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.1150748",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -65,15 +99,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ruhno\IdeaProjects\wishmaster" />
+      <recent name="C:\Users\ruhno\IdeaProjects\wishmaster\target\WEB-INF" />
+      <recent name="C:\Users\ruhno\IdeaProjects\wishmaster\target\WEB-INF\lib" />
       <recent name="C:\Users\ruhno\IdeaProjects\wishmaster\src\main\resources" />
-      <recent name="C:\Users\ruhno\IdeaProjects\wishmaster\src\main\java" />
+      <recent name="C:\Users\ruhno\IdeaProjects\wishmaster\web\WEB-INF" />
+      <recent name="C:\Users\ruhno\IdeaProjects\wishmaster" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.17">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="wishmaster" />
@@ -81,6 +117,103 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tomcat 10.1.17" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.17" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="wishmaster:Web exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="convert" />
+          </settings>
+        </artifact>
+        <artifact name="wishmaster:Web">
+          <settings>
+            <option name="CONTEXT_PATH" value="/wishmaster_Web" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="3f30a1fb-e7a2-4450-9d5e-4e5b9dc8f082" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="64006" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="wishmaster:Web exploded" />
+          <artifact name="wishmaster:Web" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Tomcat Server.Tomcat 10.1.17" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
@@ -103,7 +236,11 @@
       <option name="presentableId" value="Default" />
       <updated>1703076390666</updated>
       <workItem from="1703076391765" duration="2165000" />
-      <workItem from="1703079426127" duration="28459000" />
+      <workItem from="1703079426127" duration="32955000" />
+      <workItem from="1703203882167" duration="4661000" />
+      <workItem from="1703246296817" duration="3911000" />
+      <workItem from="1703256323851" duration="7534000" />
+      <workItem from="1703281168163" duration="41892000" />
     </task>
     <task id="LOCAL-00001" summary="Database.java">
       <option name="closed" value="true" />
@@ -153,7 +290,31 @@
       <option name="project" value="LOCAL" />
       <updated>1703158317673</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="rename">
+      <option name="closed" value="true" />
+      <created>1703165384247</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703165384247</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Database interaction rework">
+      <option name="closed" value="true" />
+      <created>1703264687498</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703264687498</updated>
+    </task>
+    <task id="LOCAL-00009" summary="xml work via servlet">
+      <option name="closed" value="true" />
+      <created>1703392539432</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1703392539432</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +338,10 @@
     <MESSAGE value="init" />
     <MESSAGE value="parse xml" />
     <MESSAGE value="fix project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix project structure" />
+    <MESSAGE value="rename" />
+    <MESSAGE value="Database interaction rework" />
+    <MESSAGE value="xml work via servlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml work via servlet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -187,7 +351,19 @@
           <line>82</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/servlet/ConverterServlet.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/wishmaster$App.ic" NAME="App Coverage Results" MODIFIED="1703255976526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

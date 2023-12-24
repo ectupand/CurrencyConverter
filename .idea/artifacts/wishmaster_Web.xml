@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="wishmaster:Web">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="wishmaster_Web.war">
+      <element id="artifact" artifact-name="wishmaster:Web exploded" />
+    </root>
+  </artifact>
+</component>

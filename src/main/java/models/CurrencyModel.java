@@ -11,6 +11,7 @@ public class CurrencyModel {
         this.charCode = charCode;
         this.value = value;
     }
+    public CurrencyModel(){}
 
     public void setCharCode(String charCode) {
         this.charCode = charCode;
@@ -24,5 +25,15 @@ public class CurrencyModel {
         this.value = value;
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public String getCharCode() {
+        return charCode;
+    }
+
+    public Float getValue() {
+        return value;
+    }
 }
