@@ -1,8 +1,6 @@
 package servlet;
 
 import jakarta.servlet.ServletConfig;
-
-import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,14 +8,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import manager.ConvertManager;
 import manager.FileManager;
-import models.CurrencyModel;
-import org.xml.sax.SAXException;
 
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.*;
-import java.net.URISyntaxException;
-import java.time.LocalDate;
-import java.util.List;
+import java.io.IOException;
 
 @WebServlet("/converter")
 public class ConverterServlet extends HttpServlet {

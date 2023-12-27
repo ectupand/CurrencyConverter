@@ -8,7 +8,7 @@ import java.io.IOException;
 public class ConvertManager {
     private CurrencyRepository currencyRepository = new CurrencyRepository();
 
-    public String getExchangeRate(String fromCurrency, Float fromCurrencyMuch, String toCurrency) throws IOException {
+    public String getExchangeRate(String fromCurrency, Float fromCurrencyMuch, String toCurrency) {
         if (currencyRepository.isUpdated()) {
             fromCurrency = fromCurrency.substring(0, 3);
             toCurrency = toCurrency.substring(0, 3);

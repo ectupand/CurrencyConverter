@@ -16,7 +16,7 @@ public class Currency {
         this.valuteID = valuteID;
         this.updatedAt = updatedAt;
     }
-    public Currency(){};
+    public Currency(){}
 
     public String getName() {
         return name;
@@ -38,23 +38,4 @@ public class Currency {
         return updatedAt;
     }
 
-    public void setCharCode(String charCode) {
-        this.charCode = charCode;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setValue(float value) {
-        this.value = value;
-    }
-
-    public void setValuteID(String valuteID) {
-        this.valuteID = valuteID;
-    }
-
-    public void setUpdatedAt(LocalDate updatedAt) {
-        this.updatedAt = updatedAt;
-    }
 }
