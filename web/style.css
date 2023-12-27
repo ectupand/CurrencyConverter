@@ -1,0 +1,35 @@
+body{
+    background: lightgrey;
+}
+
+select{
+    position: fixed;
+    top: 20%;
+}
+
+.fromCurrency{
+    left:45%;
+}
+.fromCurrencyInput{
+    position: fixed;
+    top: 24%;
+    left: 45%;
+    width: 66px;
+}
+
+.toCurrency{
+    left:55%;
+}
+.toCurrencyInput{
+    position: fixed;
+    top: 24%;
+    left: 55%;
+    width: 66px;
+}
+
+button{
+    position: fixed;
+    top: 30%;
+    left: 48%;
+}
+
