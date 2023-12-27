@@ -10,19 +10,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be66dec-7019-415d-bc26-3a8120d57d07" name="Changes" comment="converter main page (WIP)">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/ConvertManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Currency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/FileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/CurrencyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/CurrencyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ConverterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ConverterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/converter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/converter.jsp" afterDir="false" />
+    <list default="true" id="2be66dec-7019-415d-bc26-3a8120d57d07" name="Changes" comment="cleaning">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +227,7 @@
       <workItem from="1703246296817" duration="3911000" />
       <workItem from="1703256323851" duration="7534000" />
       <workItem from="1703281168163" duration="75857000" />
-      <workItem from="1703708670020" duration="1091000" />
+      <workItem from="1703708670020" duration="1576000" />
     </task>
     <task id="LOCAL-00001" summary="Database.java">
       <option name="closed" value="true" />
@@ -320,7 +309,39 @@
       <option name="project" value="LOCAL" />
       <updated>1703430946261</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="post form">
+      <option name="closed" value="true" />
+      <created>1703713602881</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703713602881</updated>
+    </task>
+    <task id="LOCAL-00012" summary="receive exchange rate">
+      <option name="closed" value="true" />
+      <created>1703713645159</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703713645159</updated>
+    </task>
+    <task id="LOCAL-00013" summary="additions">
+      <option name="closed" value="true" />
+      <created>1703713652871</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1703713652871</updated>
+    </task>
+    <task id="LOCAL-00014" summary="cleaning">
+      <option name="closed" value="true" />
+      <created>1703713938534</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1703713938534</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +369,11 @@
     <MESSAGE value="Database interaction rework" />
     <MESSAGE value="xml work via servlet" />
     <MESSAGE value="converter main page (WIP)" />
-    <option name="LAST_COMMIT_MESSAGE" value="converter main page (WIP)" />
+    <MESSAGE value="post form" />
+    <MESSAGE value="receive exchange rate" />
+    <MESSAGE value="additions" />
+    <MESSAGE value="cleaning" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaning" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
