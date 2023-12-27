@@ -16,6 +16,7 @@ public class Currency {
         this.valuteID = valuteID;
         this.updatedAt = updatedAt;
     }
+    public Currency(){};
 
     public String getName() {
         return name;

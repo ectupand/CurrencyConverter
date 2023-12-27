@@ -80,8 +80,8 @@ public class FileManager {
             Scanner scanner = new Scanner(this.connection.getInputStream());
             while (scanner.hasNext()) {
                 sb.append(scanner.nextLine());
-                storeResponseToFile(sb, filePath);
             }
+            storeResponseToFile(sb, filePath);
         } else {
             System.err.println("Error in sending a GET request");
         }
@@ -92,7 +92,9 @@ public class FileManager {
     private void storeResponseToFile(StringBuilder response, String filePath) {
         try {
             this.file = new File(filePath);
+
             FileWriter fstream = new FileWriter(this.file, true);
+
             BufferedWriter out = new BufferedWriter(fstream);
             out.write(String.valueOf(response));
             out.close();
@@ -106,7 +108,7 @@ public class FileManager {
 
         Document doc;
         try {
-            doc = buildDocument(filePath);
+            doc = buildDocument(this.file.getPath());
         } catch (Exception e) {
             System.err.println();
             return;
@@ -161,8 +163,14 @@ public class FileManager {
             addToCurrenciesList(currency);
             addToCurrenciesModelsList(currencyModel);
         }
+        addToCurrenciesList(
+                new Currency("Российский рубль", "RUB", 1f, "R1", LocalDate.now())
+        );
+        addToCurrenciesModelsList(
+                new CurrencyModel("Российский рубль", "RUB", 1f)
+        );
         new CurrencyRepository().updateCurrenciesTable(getCurrenciesList());
-        this.file.delete();
+        this.file.deleteOnExit();
     }
 
     private Document buildDocument(String filePath) throws Exception {
