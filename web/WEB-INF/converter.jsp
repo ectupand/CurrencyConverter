@@ -24,10 +24,11 @@
                     <option value="${currency.getCharCode()}">${currency.getCharCode()}</option>
                 </c:forEach>
             </select>
-        <input class="fromCurrencyInput" type="text" id="fromCurrencyName" name="fromCurrencyName" value="1">
+        <input class="fromCurrencyInput" type="text" id="fromCurrencyName" name="fromCurrencyName" value="${requestScope.fromCurrencyMuch}">
 
         <label for="fromCurrencyName">
             <select class="toCurrency" name="toCurrencyDropdown" id="toCurrency">
+                <option selected>${requestScope.toCurrency} (current) </option>
                 <c:forEach items="${requestScope.currenciesList}" var="currency">
                     <option value="${currency.getCharCode()}">${currency.getCharCode()}</option>
                 </c:forEach>

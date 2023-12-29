@@ -10,15 +10,17 @@ public class ConvertManager {
 
     public String getExchangeRate(String fromCurrency, Float fromCurrencyMuch, String toCurrency) {
         if (currencyRepository.isUpdated()) {
-            fromCurrency = fromCurrency.substring(0, 3);
-            toCurrency = toCurrency.substring(0, 3);
 
             if (fromCurrency.equals("RUB")) {
                 Float value = currencyRepository.getCurrencyExchangeRate(toCurrency);
                 return String.format("%.2f", fromCurrencyMuch / value);
+            } else if (toCurrency.equals("RUB")){
+                Float value = currencyRepository.getCurrencyExchangeRate(fromCurrency);
+                return String.format("%.2f", fromCurrencyMuch*value);
             }
             return String.format("%.2f",
                     currencyRepository.getCurrencyExchangeRate(toCurrency)
+                            * fromCurrencyMuch
                             / currencyRepository.getCurrencyExchangeRate(fromCurrency)
             );
         }

@@ -11,7 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2be66dec-7019-415d-bc26-3a8120d57d07" name="Changes" comment="cleaning">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqlDataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ConvertManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ConvertManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ConverterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ConverterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/.config" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/converter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/converter.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,12 +115,12 @@
       <deployment>
         <artifact name="wishmaster:Web exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="convert" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
         <artifact name="wishmaster:Web">
           <settings>
-            <option name="CONTEXT_PATH" value="/wishmaster_Web" />
+            <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
@@ -228,6 +235,7 @@
       <workItem from="1703256323851" duration="7534000" />
       <workItem from="1703281168163" duration="75857000" />
       <workItem from="1703708670020" duration="1576000" />
+      <workItem from="1703784254421" duration="3336000" />
     </task>
     <task id="LOCAL-00001" summary="Database.java">
       <option name="closed" value="true" />
